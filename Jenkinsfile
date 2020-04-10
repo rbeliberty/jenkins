@@ -7,6 +7,9 @@ node{
         stage('02 - Stage'){
             sh "echo 'Hello World !'"
         }
+        stage('03 - Stage'){
+            sh "echo 'Hello World !'"
+        }
 
     }
     finally{
