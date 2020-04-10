@@ -10,6 +10,9 @@ node{
         stage('03 - Stage'){
             sh "echo 'Hello World !'"
         }
+        stage('04 - Stage'){
+            sh "echo 'Il est 17h14'"
+        }
 
 
 
