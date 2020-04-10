@@ -7,6 +7,7 @@ node{
         stage('02 - Stage'){
             sh "echo 'Hello World !'"
         }
+
     }
     finally{
         cleanWs()
