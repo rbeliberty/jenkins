@@ -13,6 +13,9 @@ node{
         stage('04 - Stage'){
             sh "echo 'Il est 17h14'"
         }
+        stage('05 - Stage'){
+            sh "echo 'Il est 17h29'"
+        }
 
 
 
