@@ -17,7 +17,7 @@ node{
             echo "Hello World !"
         }
         stage('02 - Stage'){
-            echo "pull_request action is : " action
+            echo "pull_request action is : " + action
         }
         stage('03 - Bye'){
             echo "End stage"
