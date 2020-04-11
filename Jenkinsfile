@@ -9,8 +9,6 @@ node{
                 echo 'x_github_event it not pull_request'
                 error('Aborting the build')
             }
-
-
         }
 
         stage('01 - Stage'){
@@ -22,13 +20,6 @@ node{
         stage('03 - Bye'){
             echo "End stage"
         }
-
-
-
-
-
-
-
 
     }
     finally{
