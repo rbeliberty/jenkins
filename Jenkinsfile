@@ -10,6 +10,14 @@ node{
         stage('03 - Stage'){
             echo "author of commit is : " + commit_author
         }
+        stage('04 - Stage'){
+            echo "pull_request action is : " action
+        }
+        stage('05 - Bye'){
+            echo "End stage"
+        }
+
+
 
 
 
