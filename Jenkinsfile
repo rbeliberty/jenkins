@@ -10,6 +10,9 @@ node{
         stage('03 - Stage'){
             echo "author of commit is : " + commit_author
         }
+        stage('04 - Bye'){
+            echo "End stage"
+        }
 
 
 
