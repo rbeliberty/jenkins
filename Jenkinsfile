@@ -5,17 +5,12 @@ node{
             sh "echo 'Hello World !'"
         }
         stage('02 - Stage'){
-            sh "echo 'Hello World !'"
+            sh "git repository name is : " + repository_name
         }
         stage('03 - Stage'){
-            sh "echo 'Hello World !'"
+            sh "author of commit is : " + commit_author
         }
-        stage('04 - Stage'){
-            sh "echo 'Il est 17h14'"
-        }
-        stage('05 - Stage'){
-            sh "echo 'Il est 17h31'"
-        }
+
 
 
 
