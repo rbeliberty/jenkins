@@ -19,6 +19,7 @@ node{
                 echo 'action is opened'
             } else if (action == 'labeled') {
                 echo 'action is labeled'
+
             } else if (action == 'synchronize') {
                 echo 'action is synchronize'
             } else if (action == 'closed') {
@@ -27,9 +28,14 @@ node{
                 echo 'action is not available'
                 error('Aborting the build')
             }
-
         }
-        stage('03 - Bye'){
+
+        stage('03 - Clone PR'){
+            git 'fetch origin pull/' + pr_id + '/head'
+            git 'checkout -b testpr FETCH_HEAD'
+        }
+
+        stage('Bye'){
             echo "End stage"
         }
 
