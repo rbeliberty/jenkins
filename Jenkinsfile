@@ -15,12 +15,12 @@ node{
             echo "Hello World !"
         }
         stage('02 - Stage'){
-            if (action == 'synchronize') {
-                echo 'action is synchronize'
-            } else if (action == 'opened') {
+            if (action == 'opened') {
                 echo 'action is opened'
             } else if (action == 'labeled') {
                 echo 'action is labeled'
+            } else if (action == 'synchronize') {
+                echo 'action is synchronize'
             } else if (action == 'closed') {
                 echo 'action is closed (pr has accepted)'
             }else{
