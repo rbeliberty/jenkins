@@ -33,8 +33,7 @@ node{
 
         stage('03 - Clone PR'){
             def PrDir = 'pr_' + github_pr_id
-            git 'clone ' + clone_url + ' -b ' + head_ref + ' ' + PrDir
-            sh "$PWD"
+
             dir(PrDir) {
             sh "$PWD"
             }
@@ -45,6 +44,7 @@ node{
         stage('Bye'){
             echo "End stage"
         }
+
 
     }
     finally{
