@@ -15,7 +15,17 @@ node{
             echo "Hello World !"
         }
         stage('02 - Stage'){
-            echo "pull_request action is : " + action
+            if (action == 'synchronize') {
+                echo 'action is synchronize'
+            } else if (action == 'opened') {
+                echo 'action is opened'
+            } else if (action == 'labeled') {
+                echo 'action is labeled'
+            }else{
+                echo 'action is not available'
+                error('Aborting the build')
+            }
+
         }
         stage('03 - Bye'){
             echo "End stage"
