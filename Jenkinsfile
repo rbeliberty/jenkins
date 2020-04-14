@@ -32,7 +32,9 @@ node{
 
 
         stage('03 - Clone PR'){
-            sh "$PWD"
+
+            sh "whoami"
+            sh "pwd"
 
         }
 
