@@ -36,6 +36,8 @@ node{
             def PrDir = 'pr_' + github_pr_id
             dir(PrDir) {
             sh "pwd"
+            sh "ls -la"
+            cat "index.php"
             }
             sh "pwd"
 
