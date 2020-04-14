@@ -32,8 +32,11 @@ node{
 
 
         stage('03 - Clone PR'){
-
-            sh "whoami"
+            sh "pwd"
+            def PrDir = 'pr_' + github_pr_id
+            dir(PrDir) {
+            sh "pwd"
+            }
             sh "pwd"
 
         }
