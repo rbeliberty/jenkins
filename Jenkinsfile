@@ -37,6 +37,7 @@ node{
             dir(PrDir) {
             sh "pwd"
             sh "ls -la"
+            cat "index.php"
             }
             sh "pwd"
 
