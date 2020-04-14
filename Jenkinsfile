@@ -32,7 +32,7 @@ node{
 
 
         stage('03 - Clone PR'){
-            def PrDir = 'pr_' + pr_id
+            def PrDir = 'pr_' + github_pr_id
             git 'clone ' + clone_url + ' -b ' + head_ref + ' ' + PrDir
             sh "$PWD"
             dir(PrDir) {
