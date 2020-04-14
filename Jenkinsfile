@@ -31,15 +31,16 @@ node{
             }
         }
 
-        if(actiion == "labeled")
-        stage('03 - Clone PR'){
-            sh "pwd"            
-            def PrDir = 'pr_' + github_pr_id
-            sh "git clone " + clone_url + " -b " + head_ref + " " + PrDir
-
-            dir(PrDir) {
+        if(action == "labeled") {
+            stage('03 - Clone PR'){
                 sh "pwd"
-                sh "ls -la"
+                def PrDir = 'pr_' + github_pr_id
+                sh "git clone " + clone_url + " -b " + head_ref + " " + PrDir
+
+                dir(PrDir) {
+                    sh "pwd"
+                    sh "ls -la"
+                }
             }
         }
 
