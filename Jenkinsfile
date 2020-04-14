@@ -31,8 +31,14 @@ node{
         }
 
         stage('03 - Clone PR'){
-            git 'fetch origin pull/' + pr_id + '/head'
-            git 'checkout -b testpr FETCH_HEAD'
+            def PrDir = 'pr_' + pr_id
+            git 'clone ' + clone_url + ' -b ' + head_ref + ' ' PrDir
+            sh "$PWD"
+            dir(PrDir) {
+            sh "$PWD"
+            }
+            sh "$PWD"
+
         }
 
         stage('Bye'){
