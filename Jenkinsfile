@@ -39,7 +39,7 @@ node{
             dir(PrDir) {
                 sh "pwd"
                 sh "ls -la"
-                cat "index.php"
+                sh "cat index.php"
             }
             sh "pwd"
 
