@@ -39,10 +39,8 @@ node{
             dir(PrDir) {
                 sh "pwd"
                 sh "ls -la"
-                sh "cat index.php"
-            }
-            sh "pwd"
 
+            }
         }
 
         stage('Bye'){
