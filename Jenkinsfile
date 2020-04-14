@@ -21,6 +21,8 @@ node{
                 echo 'action is opened'
             } else if (action == 'labeled') {
                 echo 'action is labeled'
+            } else if (action == 'closed') {
+                echo 'action is closed (pr has accepted)'
             }else{
                 echo 'action is not available'
                 error('Aborting the build')
