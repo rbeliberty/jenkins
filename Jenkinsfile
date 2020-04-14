@@ -15,19 +15,33 @@ node{
             echo "Hello World !"
         }
         stage('02 - Stage'){
-            if (action == 'synchronize') {
-                echo 'action is synchronize'
-            } else if (action == 'opened') {
+            if (action == 'opened') {
                 echo 'action is opened'
             } else if (action == 'labeled') {
                 echo 'action is labeled'
+
+            } else if (action == 'synchronize') {
+                echo 'action is synchronize'
+            } else if (action == 'closed') {
+                echo 'action is closed (pr has accepted)'
             }else{
                 echo 'action is not available'
                 error('Aborting the build')
             }
+        }
+
+        stage('03 - Clone PR'){
+            def PrDir = 'pr_' + pr_id
+            git 'clone ' + clone_url + ' -b ' + head_ref + ' ' PrDir
+            sh "$PWD"
+            dir(PrDir) {
+            sh "$PWD"
+            }
+            sh "$PWD"
 
         }
-        stage('03 - Bye'){
+
+        stage('Bye'){
             echo "End stage"
         }
 
