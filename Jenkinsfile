@@ -19,6 +19,7 @@ node{
                 echo 'action is opened'
             } else if (action == 'labeled') {
                 echo 'action is labeled'
+                echo "label : " + labels_value
 
             } else if (action == 'synchronize') {
                 echo 'action is synchronize'
@@ -30,7 +31,7 @@ node{
             }
         }
 
-
+        if(actiion == "labeled")
         stage('03 - Clone PR'){
             sh "pwd"            
             def PrDir = 'pr_' + github_pr_id
