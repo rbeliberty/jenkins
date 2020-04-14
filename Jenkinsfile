@@ -32,12 +32,8 @@ node{
 
 
         stage('03 - Clone PR'){
-            def PrDir = 'pr_' + github_pr_id
-           
-            dir(PrDir) {
             sh "$PWD"
-            }
-            sh "$PWD"
+
 
         }
 
